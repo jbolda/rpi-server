@@ -5,17 +5,11 @@ from PIL import Image
 from inky.auto import auto
 
 inky = auto(ask_user=True, verbose=True)
-saturation = 0.5
 
 
 def draw_image():
-    if len(sys.argv) == 1:
-        print("""
-    Usage: {file} image-file
-    """.format(file=sys.argv[0]))
-        sys.exit(1)
-
-    image = Image.open(sys.argv[1])
+    saturation = 0.5
+    image = Image.open("screenshot.jpg")
     resizedimage = image.resize(inky.resolution)
 
     if len(sys.argv) > 2:
