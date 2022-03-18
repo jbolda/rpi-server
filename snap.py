@@ -6,7 +6,9 @@ from PIL import Image
 
 
 def draw_snapshot():
-    saturation = 0.75
+    inky = auto(ask_user=True, verbose=True)
+    saturation = 0.75           # Saturation of palette
+    thresholds = [64, 64, 64]  # Threshold for snapping colours, I guess?
 
     palette = hitherdither.palette.Palette(
         inky._palette_blend(saturation, dtype='uint24'))
