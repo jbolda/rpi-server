@@ -1,7 +1,9 @@
+from inky.auto import auto
 from flask import Flask
 from clear import clear
 from image import draw_image
 
+inky = auto(ask_user=True, verbose=True)
 app = Flask(__name__)
 
 
