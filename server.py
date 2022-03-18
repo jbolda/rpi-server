@@ -19,7 +19,7 @@ def refresh():
 
 # the web page that we are drawing
 @app.route("/data")
-def picture():
+def data():
     return "<p>Hello, World!</p>"
 
 
