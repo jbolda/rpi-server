@@ -35,6 +35,6 @@ def picture():
 
 # this will be the trigger that causes a page rerender
 @app.route("/snap")
-def picture():
+def snapshot():
     snap()
     return "<p>The drawing process has begun.</p>"
