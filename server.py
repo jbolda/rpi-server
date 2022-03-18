@@ -2,6 +2,7 @@ from inky.auto import auto
 from flask import Flask
 from clear import clear
 from image import draw_image
+from snap import draw_snapshot
 
 inky = auto(ask_user=True, verbose=True)
 app = Flask(__name__)
@@ -29,4 +30,11 @@ def data():
 @app.route("/draw")
 def picture():
     draw_image()
+    return "<p>The drawing process has begun.</p>"
+
+
+# this will be the trigger that causes a page rerender
+@app.route("/snap")
+def picture():
+    snap()
     return "<p>The drawing process has begun.</p>"
