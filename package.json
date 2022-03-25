@@ -1,0 +1,37 @@
+{
+  "name": "rpi-server",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fastify": "fastify",
+    "start": "fastify start server.mjs -P",
+    "dev": "fastify start -w -l info -P server.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbolda/rpi-server.git"
+  },
+  "author": "Jacob Bolda <me@jacobbolda.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbolda/rpi-server/issues"
+  },
+  "homepage": "https://github.com/jbolda/rpi-server#readme",
+  "dependencies": {
+    "@effection/process": "^2.0.4",
+    "effection": "^2.0.4",
+    "fastify": "^3.27.4",
+    "fastify-autoload": "^3.10.0",
+    "fastify-cli": "^2.15.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.2",
+    "fastify-static": "^4.6.1"
+  },
+  "volta": {
+    "node": "16.14.2",
+    "npm": "8.5.5"
+  }
+}
